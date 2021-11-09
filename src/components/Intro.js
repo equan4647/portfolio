@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState,useRef } from "react";
 import styled from "styled-components";
-import Me from "../assets/Images/profile-img.png";
+import Me from "../assets/Images/front-crop.png";
 import { mediaQueries } from "./Themes";
+import { init } from 'ityped'
+import './styles.css'  
 
 const Box = styled(motion.div)`
   /* width: 50vw;
@@ -95,13 +97,16 @@ const SubBox = styled.div`
   width: 50%;
   position: relative;
   display: flex;
+  overflow:hidden;
   .pic {
     position: absolute;
-    bottom: 0;
     left: 50%;
     transform: translate(-50%, 0%);
     width: 100%;
-    height: auto;
+    background-color:crimson;
+    float:left;
+    bottom:-10%;
+    height:auto;
   }
   ${mediaQueries(50)`
       width: 100%;
@@ -146,6 +151,69 @@ const SubBox = styled.div`
  `};
 `;
 
+const SubBox2 = styled.div`
+  width: 50%;
+  position: relative;
+  display: flex;
+  overflow:hidden;
+  background-color:crimson;
+
+  .pic {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 85%;
+    background-color:crimson;
+    float:left;
+    bottom:0;
+    height:auto;
+  }
+  ${mediaQueries(50)`
+      width: 100%;
+    height: 50%;
+      .pic {
+    
+    width: 70%;
+    
+  }
+
+  `};
+
+  ${mediaQueries(40)`
+  
+      .pic {
+    
+    width: 80%;
+    
+  }
+
+  `};
+
+  ${mediaQueries(30)`
+     
+
+      .pic {
+    
+    width: 90%;
+    
+  }
+
+  `};
+  ${mediaQueries(20)`
+     
+
+     .pic {
+   
+   width: 80%;
+   
+ }
+
+ `};
+`;
+
+
+
+
 const Text = styled(motion.div)`
   font-size: calc(1rem + 1.5vw);
   color: ${(props) => props.theme.body};
@@ -185,6 +253,19 @@ const Text = styled(motion.div)`
 const Intro = () => {
   /* console.log(mq); */
 
+  const textRef = useRef();
+
+  useEffect(() => {
+    init(textRef.current, {
+      showCursor: true,
+      backDelay:1500,
+      startDelay: 1000,
+      backSpeed:60,
+      strings: ["App Developer", "Data Engineer","Cloud Geek","Human Being"],
+    });
+  }, []);
+
+
   const [height, setHeight] = useState("55vh");
 
   useEffect(() => {
@@ -205,12 +286,13 @@ const Intro = () => {
         <Text>
           <h1>Hi,</h1>
 
-          <h3>I'm CodeBucks.</h3>
+          <h3>I'm Equan.</h3>
+          <h4>An Innovative <span className="spanType" ref={textRef}></span></h4>
 
-          <h6>I design and Code simple yet beautiful websites.</h6>
+          
         </Text>
       </SubBox>
-      <SubBox>
+     <SubBox2> 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -218,7 +300,7 @@ const Intro = () => {
         >
           <img className="pic" src={Me} alt="My Pic" />
         </motion.div>
-      </SubBox>
+      </SubBox2>
     </Box>
   );
 };

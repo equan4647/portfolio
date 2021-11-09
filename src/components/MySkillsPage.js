@@ -164,29 +164,26 @@ const MySkillsPage = () => {
 
           <Main>
             <Title>
-              <Design width={40} height={40} /> Designer
+              <Develope width={40} height={40} /> Data Engineer
             </Title>
             <Description>
-              I love to create design which speaks, Keep it clean, minimal and
-              simple.
+            <p>
+              Nothing is worse then data that is not accessible in time, i'll solve that problem for you
+              </p><br/>
+              <strong>Skills</strong> <br />
+              <p>
+                Python, SQL, PySpark, ApacheBeam, SQL Servers, AWS, Azure, Data Warehousing, Data Cleansing
+              </p>
+              
             </Description>
             <Description>
-              <strong>I like to Design</strong> <br />
-              <ul>
-                <li>Web Design</li>
-                <li>Mobile Apps</li>
-              </ul>
-            </Description>
-            <Description>
-              <strong>Tools</strong> <br />
-              <ul>
-                <li>Figma</li>
-              </ul>
+              <strong>Experience</strong> <br />
+              <p>2-3 Years</p>
             </Description>
           </Main>
           <Main>
             <Title>
-              <Develope width={40} height={40} /> Frontend Developer
+              <Develope width={40} height={40} /> Fullstack Developer
             </Title>
             <Description>
               I value business or brand for which i'm creating, thus i enjoy
@@ -195,13 +192,12 @@ const MySkillsPage = () => {
             <Description>
               <strong>Skills</strong> <br />
               <p>
-                Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase
-                etc.
+               React, React Native, Redux, SASS, JS, Node, Express, Python, Django, Flask, REST, Sockets.io, Firebase
               </p>
             </Description>
             <Description>
-              <strong>Tools</strong> <br />
-              <p>VScode, Github, Codepen etc.</p>
+              <strong>Experience</strong> <br />
+              <p>4-5 Years</p>
             </Description>
           </Main>
           <BigTitle text="Skills" top="80%" right="30%" />

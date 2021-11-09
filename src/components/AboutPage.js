@@ -110,15 +110,14 @@ const AboutPage = () => {
           <Main
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}>
-            I'm a front-end developer located in India. I love to create simple
-            yet beautiful websites with great user experience.
+            I'm a full-stack developer located in Pakistan. I love to create complex
+            yet beautiful Web and Mobile Application with great user experience and margin for growth.
             <br />
             <br />
-            I'm interested in the whole frontend stack Like trying new things
-            and building great projects. I'm an independent freelancer and
-            blogger. I love to write blogs and read books. <br />
-            <br />I believe everything is an Art when you put your consciousness
-            in it. You can connect with me via social links.{' '}
+            My curiosity got me into the modern data world where i started to do Data engineering project as 
+            a side hobby eventually ended up working in that industry.
+
+            <br />Apart from that i love football,enjoy playing games and pretty much any geeky stuff. You can connect with me via social links.{' '}
           </Main>
           <BigTitle text='ABOUT' top='10%' left='5%' />
         </Box>

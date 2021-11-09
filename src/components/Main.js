@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { NavLink } from "react-router-dom";
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 //Components
@@ -183,6 +183,16 @@ const Main = () => {
 
   const handleClick = () => setClick(!click);
 
+
+  useEffect(() => {
+    
+    setTimeout(() => {
+      setClick(true)
+      
+    }, 200);
+
+
+  }, [])
   const moveY = {
     y: "-100%",
   };
@@ -203,7 +213,7 @@ const Main = () => {
         <DarkDiv click={click} />
         <Container>
           <LogoComponent theme={click ? "dark" : "light"} />
-          <PowerButton />
+          {/* <PowerButton /> */}
           {mq ? (
             <SocialIcons theme="light" />
           ) : (
@@ -226,7 +236,7 @@ const Main = () => {
               />
             )}
 
-            <span>click here</span>
+            <span>.</span>
           </Center>
 
           {mq ? (
