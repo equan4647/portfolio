@@ -108,7 +108,7 @@ const Link = styled(NavLink)`
   color: ${(props) => props.theme.text};
   text-decoration: none;
   padding: 0.5rem calc(2rem + 2vw);
-  border-radius: 0 0 0 50px;
+  border-radius: 0 50px 0 50px;
   font-size: calc(1em + 0.5vw);
 
   ${Box}:hover & {
@@ -147,9 +147,9 @@ const Card = (props) => {
         <Link to={{ pathname: `${demo}` }} target="_blank">
           Visit
         </Link>
-        <Git to={{ pathname: `${github}` }} target="_blank">
+        {/* <Git to={{ pathname: `${github}` }} target="_blank">
           <Github width={30} height={30} />
-        </Git>
+        </Git> */}
       </Footer>
     </Box>
   );

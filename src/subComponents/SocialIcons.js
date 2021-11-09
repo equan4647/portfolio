@@ -55,7 +55,7 @@ const SocialIcons = (props) => {
         <NavLink
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://github.com/codebucks27" }}
+          to={{ pathname: "https://github.com/equan4647" }}
         >
           <Github
             width={25}
@@ -74,13 +74,11 @@ const SocialIcons = (props) => {
         <NavLink
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://twitter.com/code_bucks" }}
+          to={{ pathname: "https://www.linkedin.com/in/equan/" }}
         >
           <Twitter
-            width={25}
-            height={25}
             fill={
-              props.theme === "dark" ? `${DarkTheme.text}` : `${DarkTheme.body}`
+              props.theme === "dark" ? true :false
             }
           />
         </NavLink>
@@ -93,7 +91,7 @@ const SocialIcons = (props) => {
         <NavLink
           style={{ color: "inherit" }}
           target="_blank"
-          to={{ pathname: "https://www.facebook.com/codebucks27" }}
+          to={{ pathname: "https://www.facebook.com/equan.rehman/" }}
         >
           <Facebook
             width={25}
@@ -104,32 +102,10 @@ const SocialIcons = (props) => {
           />
         </NavLink>
       </motion.div>
-      <motion.div
-        initial={{ transform: "scale(0)" }}
-        animate={{ scale: [0, 1, 1.5, 1] }}
-        transition={{ type: "spring", duration: 1, delay: 1.6 }}
-      >
-        <NavLink
-          style={{ color: "inherit" }}
-          target="_blank"
-          to={{
-            pathname:
-              "https://www.youtube.com/channel/UCeYt6blRBKuNrEg_-282fSA",
-          }}
-        >
-          <YouTube
-            width={25}
-            height={25}
-            fill={
-              props.theme === "dark" ? `${DarkTheme.text}` : `${DarkTheme.body}`
-            }
-          />
-        </NavLink>
-      </motion.div>
-
+     
       <Line
         initial={{ height: 0 }}
-        animate={{ height: mq ? "5rem" : "8rem" }}
+        animate={{ height: mq ? "5rem" : "7rem" }}
         color={props.theme}
         transition={{ type: "spring", duration: 1, delay: 0.8 }}
       />
