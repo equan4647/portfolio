@@ -38,3 +38,9 @@
     width: 25px;
     height: 25px;
 }
+
+.workImages{
+    width: 80%;
+    align-self: center;
+    height: 80%;
+}

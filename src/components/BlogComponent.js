@@ -3,12 +3,13 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { mediaQueries } from "./Themes";
 
+
 const Box = styled(motion(NavLink))`
   backdrop-filter: blur(2px);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   text-decoration: none;
-  width: calc(10rem + 15vw);
-  height: 20rem;
+  width: calc(40rem + 15vw);
+  height: 35rem;
   border: 2px solid ${(props) => props.theme.text};
   padding: 1rem;
   color: ${(props) => props.theme.text};
@@ -43,6 +44,49 @@ const Box = styled(motion(NavLink))`
 
   `};
 `;
+
+
+const NoClickBox = styled(motion.div)`
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  width: calc(40rem + 15vw);
+  height: 35rem;
+  border: 2px solid ${(props) => props.theme.text};
+  padding: 1rem;
+  color: ${(props) => props.theme.text};
+
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+
+  cursor: pointer;
+  &:hover {
+    color: ${(props) => props.theme.body};
+    background-color: ${(props) => props.theme.text};
+
+    transition: all 0.3s ease;
+  }
+
+  ${mediaQueries(50)`
+    width:calc(60vw);
+
+  `};
+  ${mediaQueries(30)`
+    
+    height:18rem;
+
+  `};
+
+  ${mediaQueries(25)`
+    
+    height:14rem;
+    padding:0.8rem;
+    backdrop-filter: none;
+
+  `};
+`;
+
 
 const Image = styled.div`
   background-image: ${(props) => `url(${props.img})`};
@@ -121,10 +165,14 @@ const item = {
 
 const BlogComponent = (props) => {
   const { name, tags, date, imgSrc, link } = props.blog;
+
+
   return (
     <Container variants={item}>
+      {link ? 
       <Box target="_blank" to={{ pathname: `${link}` }}>
-        <Image img={imgSrc} />
+        <img src={imgSrc} className="workImages" />
+        {/* <Image img={imgSrc} /> */}
         <Title>{name}</Title>
         <HashTags>
           {tags.map((t, id) => (
@@ -133,6 +181,20 @@ const BlogComponent = (props) => {
         </HashTags>
         <Date>{date}</Date>
       </Box>
+      : 
+      <NoClickBox target="_blank" to={{ pathname: `${link}` }}>
+      <img src={imgSrc} className="workImages" />
+      {/* <Image img={imgSrc} /> */}
+      <Title>{name}</Title>
+      <HashTags>
+        {tags.map((t, id) => (
+          <Tag key={id}>#{t}</Tag>
+        ))}
+      </HashTags>
+      <Date>{date}</Date>
+    </NoClickBox>
+      
+      }
     </Container>
   );
 };

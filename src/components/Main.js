@@ -284,7 +284,7 @@ const Main = () => {
           )}
 
           {mq ? (
-            <BLOG click={+click} onClick={() => setpath("blog")} to="/blog">
+            <BLOG click={+click} onClick={() => setpath("blog")} to="/work">
               <motion.h2
                 initial={{
                   y: -200,
@@ -301,7 +301,7 @@ const Main = () => {
               </motion.h2>
             </BLOG>
           ) : (
-            <BLOG click={+false} onClick={() => setpath("blog")} to="/blog">
+            <BLOG click={+false} onClick={() => setpath("blog")} to="/work">
               <motion.h2
                 initial={{
                   y: -200,
@@ -319,7 +319,7 @@ const Main = () => {
             </BLOG>
           )}
 
-          <WORK click={+click} to="/work">
+          <WORK click={+click} to="/certifications">
             <motion.h2
               onClick={() => setpath("work")}
               initial={{
