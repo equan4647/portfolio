@@ -17,6 +17,8 @@ const Box = styled(motion(NavLink))`
   display: flex;
   flex-direction: column;
   z-index: 5;
+  min-height:20rem;
+
 
   cursor: pointer;
   &:hover {
@@ -55,6 +57,7 @@ const NoClickBox = styled(motion.div)`
   border: 2px solid ${(props) => props.theme.text};
   padding: 1rem;
   color: ${(props) => props.theme.text};
+  min-height:20rem;
 
   display: flex;
   flex-direction: column;
